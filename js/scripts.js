@@ -1,4 +1,20 @@
-//uchwyt elementu button o id="addElem"
+var btnClik = document.querySelector('#addElem');
+function createItem() {
+//pierwszy sposób
+    var newlist = document.getElementById("list");
+    var num = document.getElementsByTagName('li').length;
+    console.log(num);
+    newlist.innerHTML += '<li>item' + num + '</li>'
+}
+btnClik.addEventListener('click', createItem);
+
+
+
+
+
+
+
+/*//uchwyt elementu button o id="addElem"
 var btnClik = document.querySelector('#addElem');
 //funkcja dla tworzenia elementów "li" wraz z zagnieżdżaniem "item x"
 function onClik () {
@@ -14,7 +30,7 @@ function onClik () {
     newElemLi.appendChild(document.createTextNode("item " + numLi++));    
 }
 //monitoring po kliknięciu myszką na button 'btnClik'wykonuje się wszystko z funkcji 'onClik'
-btnClik.addEventListener('click', onClik);
+btnClik.addEventListener('click', onClik);*/
 
 
 
@@ -26,31 +42,5 @@ btnClik.addEventListener('click', onClik);
 
 
 
-/*var btnClik = document.querySelector('#addElem');
-
-function createItem() {
-//pierwszy sposób
-    var newlist = document.getElementById("list");
-    var newElemLi = document.createElement("li");
-    
-    var newItem = document.createTextNode("item ");
-        
-    newElemLi.appendChild(newItem);
-        
-    var num = document.getElementsByTagName('li').length;
-    console.log(num);
-    
-    newlist.appendChild(newElemLi);
-    */
-//albo
-//drugi sposób
-    /*var newlist = document.getElementById("list");
-    
-    var num = document.getElementsByTagName('li').length;
-    console.log(num);
-    newlist.innerHTML += '<li>item</li>';
-}*/
-
-//btnClik.addEventListener('click', createItem);
 
 //tylko nie wiem jak dopisać liczbę porządkową do item...:(
